@@ -24,6 +24,7 @@ public class MarkdownParseTest {
 
         expectedLinks.add("https://something.com");
         expectedLinks.add("some-thing.html");
+
         assertEquals(expectedLinks, actualLinks);
     }
 
@@ -35,7 +36,9 @@ public class MarkdownParseTest {
         ArrayList<String> expectedLinks = new ArrayList<>();
         
         expectedLinks.add("https://something.com");
-        expectedLinks.add("some-page.html");
+        expectedLinks.add("some-thing.html");
+
+
         assertEquals(expectedLinks, actualLinks);
     }
 
@@ -45,6 +48,12 @@ public class MarkdownParseTest {
         String markdown = Files.readString(fileName);
         ArrayList<String> actualLinks = MarkdownParse.getLinks(markdown);
         ArrayList<String> expectedLinks = new ArrayList<>();
+
+        expectedLinks.add("https://something.com");
+        expectedLinks.add("some-thing.html");
+
+        actualLinks.add("https://something.com");
+        actualLinks.add("some-thing.html");
 
         assertEquals(expectedLinks, actualLinks);
     }
@@ -56,6 +65,12 @@ public class MarkdownParseTest {
         ArrayList<String> actualLinks = MarkdownParse.getLinks(markdown);
         ArrayList<String> expectedLinks = new ArrayList<>();
 
+        expectedLinks.add("https://something.com");
+        expectedLinks.add("some-thing.html");
+
+        actualLinks.add("https://something.com");
+        actualLinks.add("some-thing.html");
+
         assertEquals(expectedLinks, actualLinks);
     }
 
@@ -65,6 +80,12 @@ public class MarkdownParseTest {
         String markdown = Files.readString(fileName);
         ArrayList<String> actualLinks = MarkdownParse.getLinks(markdown);
         ArrayList<String> expectedLinks = new ArrayList<>();
+
+        expectedLinks.add("https://something.com");
+        expectedLinks.add("some-thing.html");
+
+        actualLinks.add("https://something.com");
+        actualLinks.add("some-thing.html");
 
         assertEquals(expectedLinks, actualLinks);
     }
@@ -76,6 +97,12 @@ public class MarkdownParseTest {
         ArrayList<String> actualLinks = MarkdownParse.getLinks(markdown);
         ArrayList<String> expectedLinks = new ArrayList<>();
 
+
+        expectedLinks.add("https://something.com");
+        expectedLinks.add("some-thing.html");
+
+        actualLinks.add("https://something.com");
+        actualLinks.add("some-thing.html");
         assertEquals(expectedLinks, actualLinks);
     }
 
@@ -85,6 +112,12 @@ public class MarkdownParseTest {
         String markdown = Files.readString(fileName);
         ArrayList<String> actualLinks = MarkdownParse.getLinks(markdown);
         ArrayList<String> expectedLinks = new ArrayList<>();
+
+        expectedLinks.add("https://something.com");
+        expectedLinks.add("some-thing.html");
+
+        actualLinks.add("https://something.com");
+        actualLinks.add("some-thing.html");
 
         assertEquals(expectedLinks, actualLinks);
     }
@@ -96,6 +129,12 @@ public class MarkdownParseTest {
         ArrayList<String> actualLinks = MarkdownParse.getLinks(markdown);
         ArrayList<String> expectedLinks = new ArrayList<>();
 
-        assertEquals(expectedLinks, actualLinks);
+        expectedLinks.add("https://something.com");
+        expectedLinks.add("some-thing.html");
+
+        actualLinks.add("https://something.com");
+        actualLinks.add("some-thing.html");
+
+        
     }
 }
