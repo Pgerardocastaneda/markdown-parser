@@ -17,11 +17,17 @@ public class MarkdownParse {
             int closeParen = markdown.indexOf(")", openParen);
             currentIndex = closeParen + 1;
 
+            if (markdown.indexOf("!", currentIndex) != -1){
+                int exclamationMark = markdown.indexOf("!", currentIndex);
+                if((exclamationMark + 1) == openBracket){
+                    currentIndex = markdown.indexOf(")", currentIndex) + 1;
+                    continue;
+                }
+            }  
 
             if(openBracket == -1){
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
                 break;
-            
             } else if(closeBracket == -1){
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
                 break;
@@ -39,6 +45,9 @@ public class MarkdownParse {
                 continue;
             }
             toReturn.add(urlString);
+
+            
+
            
         }
   
