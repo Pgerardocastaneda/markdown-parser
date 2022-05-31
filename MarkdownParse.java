@@ -45,6 +45,7 @@ public class MarkdownParse {
            toReturn.add(urlString);
           
        }
+       System.out.println(currentIndex);
  
        return toReturn;
    }
