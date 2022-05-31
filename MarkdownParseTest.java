@@ -142,17 +142,17 @@ public class MarkdownParseTest {
     @Test
     public void snip1() throws IOException{
 
-        assertArrayEquals(List.of("'google.com", "google.com", "ucsd.edu"), MarkdownParse.getLinks(Files.readString(Path.of("Snippet1.md"))));
+        assertEquals(List.of("'google.com", "google.com", "ucsd.edu"), MarkdownParse.getLinks(Files.readString(Path.of("Snippet1.md"))));
     }
 
     @Test
     public void snip2() throws IOException{
-        assertArrayEquals(List.of("b.com", "a.com(())", "example.com"), MarkdownParse.getLinks(Files.readString(Path.of("Snippet2.md"))));
+        assertEquals(List.of("b.com", "a.com(())", "example.com"), MarkdownParse.getLinks(Files.readString(Path.of("Snippet2.md"))));
     }
 
     @Test
     public void snip3() throws IOException{
 
-        assertArrayEquals(List.of("\n https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/scedule \n"), MarkdownParse.getLinks(Files.readString(Path.of("Snippet3.md"))));
+        assertEquals(List.of("\n https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/scedule \n"), MarkdownParse.getLinks(Files.readString(Path.of("Snippet3.md"))));
     }
 }
