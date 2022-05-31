@@ -4,6 +4,7 @@ import org.junit.*;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.*;
 
 import java.util.ArrayList;
 
@@ -146,7 +147,6 @@ public class MarkdownParseTest {
 
     @Test
     public void snip2() throws IOException{
-
         assertArrayEquals(List.of("b.com", "a.com(())", "example.com"), MarkdownParse.getLinks(Files.readString(Path.of("Snippet2.md"))));
     }
 
